@@ -36,7 +36,7 @@ OpenAI API key
 
 8. Run the project
 ```
-   python main.py "what is the actor in Casino?"
+   python rag_neo4j.py "what is the actor in Casino?"
 ```
 
 ## Project Architecture 
@@ -62,7 +62,9 @@ README.md: This file, containing instructions on how to set up, run, and use the
 ## Notes 
 
 Ensure your environment variables (NEO4J_URL, NEO4J_USERNAME, NEO4J_PASSWORD, NEO4J_DATABASE, OPENAI_API_KEY) are correctly set before running the application.
-Modify the chatbot's behavior or add additional functionalities by extending the tools and handlers defined in main.py.
+Modify the chatbot's behavior or add additional functionalities by extending the tools and handlers defined in rag_neo4j.py.
+We have included the original ipynb used in developing the code just in case there are some errors. 
+The movie dataset used is small
 
 
    
