@@ -41,6 +41,8 @@ OpenAI API key
 
 ## Project Architecture 
 
+![alt text] (https://cdn-images-1.medium.com/max/608/0*wE1BNJ1a454uJQGy)
+
 The project is structured as follows:
 
 main.py: Entry point of the application. Loads movie data into Neo4j, sets up vector similarity, QA handlers, and initializes the chatbot agent.
