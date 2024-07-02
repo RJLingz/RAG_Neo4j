@@ -39,12 +39,44 @@ OpenAI API key
    python rag_neo4j.py "what is the actor in Casino?"
 ```
 
+## IMDB Movie Dataset
+
+### Overview
+The IMDb movie dataset used in this project contains a collection of movies with various attributes, such as title, release date, IMDb rating, directors, actors, and genres. This dataset provides a rich source of information that the chatbot can query to answer user questions about movies.
+
+### Dataset Source
+
+The dataset is sourced from a CSV file hosted on GitHub:
+
+```
+    https://raw.githubusercontent.com/tomasonjo/blog-datasets/main/movies/movies_small.csv
+
+```
+
+### Data Fields 
+The dataset includes the following fields:
+
+movieId: A unique identifier for each movie.
+title: The title of the movie.
+released: The release date of the movie.
+imdbRating: The IMDb rating of the movie.
+director: The director(s) of the movie, separated by a pipe (|) if there are multiple directors.
+actors: The actor(s) in the movie, separated by a pipe (|) if there are multiple actors.
+genres: The genre(s) of the movie, separated by a pipe (|) if there are multiple genres.
+
+
 ## Project Architecture 
+
+The project employs Retrieval-Augmented Generation (RAG) techniques to enhance the chatbot's ability to answer questions:
+
+Vector Similarity Search: Uses Neo4jVector and OpenAI embeddings to perform similarity search on movie data. This allows the chatbot to retrieve relevant information based on vector representations of movie attributes (title, release date, IMDb rating).
+
+GraphCypherQAChain: Uses Cypher queries to retrieve specific information from the Neo4j database. This chain handles complex queries that require precise graph traversal and relationship-based data extraction.
 
 
 The project is structured as follows:
 
-main.py: Entry point of the application. Loads movie data into Neo4j, sets up vector similarity, QA handlers, and initializes the chatbot agent.
+rag_neo4j.py: Entry point of the application. Loads movie data into Neo4j, sets up vector similarity, QA handlers, and initializes the chatbot agent.
 
 MovieNeo4jLoader: Class to load movie data from CSV into Neo4j database.
 
