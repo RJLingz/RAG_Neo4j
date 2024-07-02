@@ -10,13 +10,34 @@ OpenAI API key
 
 1. Clone the repository:
 
-2. Install dependencies:
+```
+    git clone https://github.com/your/repository.git
+    cd repository-name
+```
 
-3. Initialize Neo4j database:
+3. Install dependencies:
+```
+   pip install --upgrade --quiet session-info langchain pipreqs openai  tiktoken  python-dotenv transformers    langchain- 
+   community langchain-openai neo4j
+```
+
+5. Initialize Neo4j database:
    We use the Neo4j website database and initialise a blank database. You will download a file that will habe all your variables that you need to use this example.
 
-4. Set up environment variables:
-5. Run the project
+6. Set up environment variables:
+```
+   NEO4J_URL=your_neo4j_url
+   NEO4J_USERNAME=your_neo4j_username
+   NEO4J_PASSWORD=your_neo4j_password
+   NEO4J_DATABASE=your_neo4j_database
+   OPENAI_API_KEY=your_openai_api_key
+
+```
+
+8. Run the project
+```
+   python main.py "what is the actor in Casino?"
+```
 
 ## Project Architecture 
 
