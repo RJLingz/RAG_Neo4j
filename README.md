@@ -41,7 +41,7 @@ OpenAI API key
 
 ## Project Architecture 
 
-![alt text] (https://cdn-images-1.medium.com/max/608/0*wE1BNJ1a454uJQGy)
+![alt text] (https://github.com/[RJLingz]/[RAG_Neo4j]/blob/[main]/0_wE1BNJ1a454uJQGy.png?raw=true)
 
 The project is structured as follows:
 
